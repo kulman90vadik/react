@@ -14,6 +14,7 @@ const Header = () => {
 
         {(location.pathname === "/houses" ||
           location.pathname === "/persons") && <Search />}
+          
       </div>
     </div>
   );

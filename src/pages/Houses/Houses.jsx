@@ -8,13 +8,13 @@ const Houses = () => {
 
   return (
     <div className="houses">
-      <div className="section">
+      {/* <div className="section"> */}
         <div className="houses__container">
           <ul className="houses__list">
             {housesList.map(item => <HousesListItem item={item}/>)}
           </ul>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 };

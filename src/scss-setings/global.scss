@@ -17,10 +17,7 @@ body {
 .main {
     flex-grow: 1;
 }
-html {
 
-   
-}
 #root {
     position: relative;
     &::after {
@@ -28,7 +25,7 @@ html {
         content: '';
         inset: 0;
         z-index: 10;
-        background-color: rgba($firefly, 0.6);
+        background-color: rgba($firefly, 0.7);
     }
 }
 
@@ -40,9 +37,9 @@ body {
     color: $coffeeBean;
     display: flex;
     flex-direction: column;
-    background-image: url('./../../public/images/poster.jpg');
-    background-position: left bottom;
-    background-size: cover;
+    background-image: url('./../../public/images/poster1.jpg');
+    background-position: right 100% bottom;
+    background-size: 110% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -62,14 +59,14 @@ body {
     outline: transparent;
 }
 
-.section {
-    width: 90%;
-    margin: 0 auto;
-    background-color: rgba(#000000, 0.6);
-    height: 300px;
-    position: relative;
-    z-index: 50;
-}
+// .section {
+//     width: 90%;
+//     margin: 0 auto;
+//     background-color: rgba(#000000, 0.6);
+//     height: 300px;
+//     position: relative;
+//     z-index: 50;
+// }
 
 
 /* Firefox */

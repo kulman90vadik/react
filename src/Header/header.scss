@@ -6,12 +6,11 @@
   left: 0;
   top: 0;
   width: 100%;
-  background-color: $firefly;
-  padding: 10px 0;
+  background-color: rgba($firefly, 0.5);
+  padding: 20px 0;
 
   &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0 15px;
   }

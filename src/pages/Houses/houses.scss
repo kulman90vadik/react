@@ -2,4 +2,48 @@
 
 .houses {
   min-height: 100vh;
+
+  &__list {
+    width: 90%;
+    padding: 30px;
+    margin: 0 auto;
+    // background-color: rgba(#000000, 0.3);
+    // height: 3300px;
+    position: relative;
+    z-index: 50;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
+
+  &__card {
+    height: 300px;
+    padding: 10px;
+    // background-image: url("../../public/images/bbb.jpg")
+    position: relative;
+    background-color: #000;
+    &::before {
+      content: '';
+      inset: -3px;
+      position: absolute;
+      box-shadow: 0 0 0 10px #070c23;
+      background: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #d400d4);
+      z-index: -1;
+    }
+    &::after {
+      content: '';
+      inset: -3px;
+      position: absolute;
+      box-shadow: 0 0 0 10px #070c23;
+      background: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #5e015e);
+      z-index: -1;
+      filter: blur(20px);
+    }
+  }
+
+  &__name {
+    display:block;
+    text-align: center;
+  }
 }
+
