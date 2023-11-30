@@ -1,0 +1,23 @@
+@import '../scss-setings/vars.scss';
+
+.search {
+  position: relative;
+
+  &__input {
+    height: 30px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid $coffeeBean;
+    outline: transparent;
+    padding: 2px 10px;
+    color: $white;
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      -webkit-appearance:none;
+    }
+  }
+
+
+}
