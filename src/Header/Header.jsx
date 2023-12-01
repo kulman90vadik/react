@@ -6,7 +6,6 @@ import "./header.scss";
 
 const Header = () => {
   const location = useLocation();
-  console.log(location.pathname);
   return (
     <div className="header">
       <div className="header__container">

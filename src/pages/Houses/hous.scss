@@ -1,7 +1,8 @@
 
 
-.persons {
+.hous {
   min-height: 100vh;
+
   &__list {
     width: 90%;
     padding: 30px;
@@ -18,7 +19,7 @@
   &__card {
     height: 300px;
     padding: 10px;
-    background-image: url("../../../public/images/person.png");
+    background-image: url("../../../public/images/logo.jpg");
     background-repeat: no-repeat;
     background-position: bottom;
     position: relative;
@@ -28,7 +29,7 @@
       inset: -3px;
       position: absolute;
       box-shadow: 0 0 0 10px #070c23;
-      background: linear-gradient(45deg, #00ff95, #232f69, #0e1538, #d400d4);
+      background: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #d400d4);
       z-index: -1;
     }
     &::after {
@@ -36,7 +37,7 @@
       inset: -3px;
       position: absolute;
       box-shadow: 0 0 0 10px #070c23;
-      background: linear-gradient(45deg, #00ff95, #232f69, #0e1538, #8f010d);
+      background: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #5e015e);
       z-index: -1;
       filter: blur(20px);
     }
@@ -55,3 +56,4 @@
     }
   }
 }
+

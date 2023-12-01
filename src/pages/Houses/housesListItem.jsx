@@ -1,10 +1,15 @@
+import { Link } from "react-router-dom";
+// import { useDispatch } from "react-redux";
+// import { addSlugHous } from "../../redux/slices/housesClise";
 
-
-const housesListItem = ({item}) => {
+const HousesListItem = ({item}) => {
+  // const dispatch = useDispatch();
   return ( 
     <li className="houses__item">
       <article className="houses__card">
-        <span className="houses__name">{item.name}</span>
+        <Link className="houses__link" to={`/hous/${item.slug}`}>
+           <span className="houses__name">{item.name}</span>
+        </Link>
       </article>
     </li>
   );
@@ -13,4 +18,5 @@ const housesListItem = ({item}) => {
 
 
 
-export default housesListItem;
+
+export default HousesListItem;

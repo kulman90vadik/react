@@ -19,7 +19,9 @@
   &__card {
     height: 300px;
     padding: 10px;
-    // background-image: url("../../public/images/bbb.jpg")
+    background-image: url("../../../public/images/logo.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
     position: relative;
     background-color: #000;
     &::before {
@@ -44,6 +46,14 @@
   &__name {
     display:block;
     text-align: center;
+    cursor: pointer;
+    font-size: 22px;
+    width: 100%;
+    padding: 2px;
+    transition: background-color 0.3s ease-in;
+    &:hover {
+      background-color: #117383;
+    }
   }
 }
 

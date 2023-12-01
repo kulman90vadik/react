@@ -5,7 +5,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   housesList: [],
-  // count: 0,
+  // slug: ''
 } 
 
 export const housesClise = createSlice({
@@ -15,10 +15,19 @@ export const housesClise = createSlice({
   reducers: {
     addToHouses: (state, obj) => {   
       state.housesList = obj.payload;
-    }
+    },
+    // addSlugHous: (state, str) => {   
+    //   state.slug = str.payload;
+    // }
+    // updateSearchValue: (state, value) => {
+    //   state.valueSearch = value.payload
+    // },
+    // closeSearchHandler: (state) => {
+    //   state.valueSearch = ''
+    // }
   },
 })
 
-export const { housesList, addToHouses} = housesClise.actions
+export const { housesList, addToHouses } = housesClise.actions
 
 export default housesClise.reducer

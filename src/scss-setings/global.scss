@@ -37,7 +37,7 @@ body {
     color: $coffeeBean;
     display: flex;
     flex-direction: column;
-    background-image: url('./../../public/images/poster1.jpg');
+    background-image: url('./../../public/images/poster.jpg');
     background-position: right 100% bottom;
     background-size: 110% 100%;
     background-repeat: no-repeat;
@@ -59,20 +59,11 @@ body {
     outline: transparent;
 }
 
-// .section {
-//     width: 90%;
-//     margin: 0 auto;
-//     background-color: rgba(#000000, 0.6);
-//     height: 300px;
-//     position: relative;
-//     z-index: 50;
-// }
-
 
 /* Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: $coffeeBean rgba($firefly, 0.5);
+    scrollbar-color: $maroon rgba($firefly, 0.5);
 }
 
 /* Chrome/Edge/Safari */
@@ -87,7 +78,7 @@ body {
 
 *::-webkit-scrollbar-thumb {
     cursor: pointer;
-    background-color: #6B3924;
+    background-color: $maroon;
     border-radius: 5px;
     border: 3px solid rgba($firefly, 0.9);
 }

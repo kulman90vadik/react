@@ -7,8 +7,6 @@
     padding: 0 15px;
     padding-top: 150px;
     min-height: 100vh;
-    // display: flex;
-    // align-items: center;
   }
 
   &__info {
@@ -26,8 +24,7 @@
       margin: 0;
       padding: 1em;
       position: relative;
-      // overflow: hidden;
-      &:before {
+      &::before {
         animation: clockwise 30s infinite linear;
         background-color: $bg;
         bottom: 10%;
@@ -38,7 +35,7 @@
         right: 0;
         top:10%;
       }
-      &:after {
+      &::after {
         animation:counter 30s infinite linear;
         background-color: $bg;
         bottom:10%;

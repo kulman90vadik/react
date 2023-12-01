@@ -1,26 +1,29 @@
 
-// import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 
-// const initialState = {
-//   search: ''
-// }
+const initialState = {
+  valueSearch: ''
+}
 
-// export const searchClise = createSlice({
-//   name: 'search',
-//   initialState,
+export const searchClise = createSlice({
+  name: 'valueSearch',
+  initialState,
 
-//   reducers: {
-//     updateSearchValue: (state, value) => {
-//       state.search = value.payload
-//     },
-//     closeSearchHandler: (state) => {
-//       state.search = ''
-//     }
-//   },
-// })
+  reducers: {
+    updateSearchValue: (state, value) => {
+      state.valueSearch = value.payload
+    },
+    updateSearchValuePersons: (state, value) => {
+      state.valueSearch = value.payload
+    },
+    closeSearchHandler: (state) => {
+      state.valueSearch = ''
+    }
+  },
+})
 
-// export const { closeSearchHandler, updateSearchValue } = searchClise.actions
+export const { valueSearch, closeSearchHandler, updateSearchValue, updateSearchValuePersons } = searchClise.actions
 
-// export default searchClise.reducer
+export default searchClise.reducer
 

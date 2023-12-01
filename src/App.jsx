@@ -8,8 +8,11 @@ import Header from "./Header/Header";
 import Persons from "./pages/Persons/Persons";
 import Quotes from "./pages/Quotes/Quotes";
 import Houses from "./pages/Houses/Houses";
+import Hous from "./pages/Houses/Hous";
+import Person from "./pages/Persons/Person";
 
 import { addToHouses } from "./redux/slices/housesClise";
+import { addToPersons } from "./redux/slices/personsClise";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -18,10 +21,9 @@ const App = () => {
 
     (async () => {
       try {
-        const res = await axios.get("https://api.gameofthronesquotes.xyz/v1/houses");
-        dispatch(addToHouses(res.data));
-        console.log(res.data);
-        // setLoading(false);
+        const houses = await axios.get("https://api.gameofthronesquotes.xyz/v1/houses");
+        dispatch(addToHouses(houses.data));
+        dispatch(addToPersons(houses.data));
       } catch (error) {
         console.warn(error);
         // setLoading(false);
@@ -41,6 +43,8 @@ const App = () => {
         <Route path="houses" element={<Houses />} />
         <Route path="persons" element={<Persons />} />
         <Route path="quotes" element={<Quotes />} />
+        <Route path="hous/:slug" element={<Hous />} />
+        <Route path="characters/:slug" element={<Person />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </>
