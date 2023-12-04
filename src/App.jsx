@@ -26,10 +26,7 @@ const App = () => {
         dispatch(addToPersons(houses.data));
       } catch (error) {
         console.warn(error);
-        // setLoading(false);
-      } finally {
-        console.log("Выполниться в любом случаи");
-      }
+      } 
     })();
 
   }, []);
@@ -43,9 +40,8 @@ const App = () => {
         <Route path="houses" element={<Houses />} />
         <Route path="persons" element={<Persons />} />
         <Route path="quotes" element={<Quotes />} />
-        <Route path="hous/:slug" element={<Hous />} />
-        <Route path="characters/:slug" element={<Person />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="houses/:slug" element={<Hous />} />
+        <Route path="persons/:slug" element={<Person />} />
       </Routes>
     </>
   );

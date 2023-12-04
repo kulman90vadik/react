@@ -25,8 +25,6 @@ const Hous = () => {
     fetchCart();
   }, []);
 
-  // console.log(items);
-
   return (
     <div className="hous">
       <div className="hous__container">

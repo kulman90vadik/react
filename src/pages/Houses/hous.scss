@@ -7,13 +7,26 @@
     width: 90%;
     padding: 30px;
     margin: 0 auto;
-    // background-color: rgba(#000000, 0.3);
-    // height: 3300px;
     position: relative;
     z-index: 50;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 60px;
+     @media ( max-width: 1120px ) {
+      width: 100%;
+      padding: 20px;
+      padding-top: 80px;
+    }
+    @media ( max-width: 992px ) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media ( max-width: 772px ) {
+      grid-template-columns: repeat(1, 1fr);
+      width: 70%;
+    }
+    @media ( max-width: 540px ) {
+      width: 100%;
+    }
   }
 
   &__card {

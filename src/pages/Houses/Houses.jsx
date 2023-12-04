@@ -5,8 +5,6 @@ import HousesListItem from './HousesListItem';
 const Houses = () => {
   const valueSearch = useSelector((state) => state.valueSearch.valueSearch);
   const housesList = useSelector((state) => state.housesList.housesList);
-// console.log(housesList);
-
 
   return (
     <div className="houses">

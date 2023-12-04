@@ -13,11 +13,7 @@ export const personsClise = createSlice({
   reducers: {
     addToPersons: (state, obj) => {   
       state.personsList = obj.payload;
-    },
-   
-    // closeSearchHandler: (state) => {
-    //   state.search = ''
-    // }
+    }
   },
 })
 

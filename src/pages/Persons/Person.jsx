@@ -1,20 +1,21 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
 import { useParams, useNavigate } from "react-router-dom";
 import "./person.scss";
+import "../Quotes/quotes.scss";
 
 const Person = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
+  const [randomItem, setRandomItem] = useState([]);
 
   useEffect(() => {
     async function fetchCart() {
-      console.log("https://api.gameofthronesquotes.xyz/v1/characters/" + slug);
-      console.log(slug);
       try {
-        const { data } = await axios.get("https://api.gameofthronesquotes.xyz/v1/characters/" + slug);
+        const { data } = await axios.get(
+          "https://api.gameofthronesquotes.xyz/v1/character/" + slug
+        );
         setItems(data);
       } catch (error) {
         alert("Error");
@@ -25,30 +26,63 @@ const Person = () => {
     fetchCart();
   }, []);
 
-  console.log(items);
-
-
-  if(!items) {
-    return 'Loading'
+  if (!items) {
+    return "Loading";
   }
+
+  const randomHandler = () => {
+    async function fetchCart() {
+      try {
+        const { data } = await axios.get(
+          "https://api.gameofthronesquotes.xyz/v1/author/" + slug + "/" + 3
+        );
+        setRandomItem(data);
+      } catch (error) {
+        alert("Error");
+        navigate("/");
+      }
+    }
+
+    fetchCart();
+  };
+
 
   return (
     <div className="person">
-      {/* <div className="hous__container">
-        <ul className="hous__list"> 
-          {items.map((item) => item.members).flat().map((item, i) => {
+      <div className="person__container">
+        <div className="person__inner">
+          {items.map((item) => {
             return (
-              <li className="hous__item" key={i}>
-                <article className="hous__card">
-                  <span className="hous__name">{item.name}</span>
-                </article>
-              </li>
+              <div className="person__item" key={item.slug}>
+                <div className="person__photo"></div>
+                <span className="person__name">{item.name}</span>
+                <span className="person__hous">{item.house.name}</span>
+                <ul className="quotes-list">
+                  {randomItem.length > 0
+                    ? randomItem.map((item) => {
+                        return (
+                          <li key={item.sentence} className="quotes-list__item">
+                            <blockquote>{item.sentence}</blockquote>
+                          </li>
+                        );
+                      })
+                    : item.quotes.map((item) => {
+                        return (
+                          <li key={item} className="quotes-list__item">
+                            <blockquote>{item}</blockquote>
+                          </li>
+                        );
+                      })}
+                </ul>
+                <button className="btn-reset btn" onClick={randomHandler}>
+                  Random Quotes
+                </button>
+              </div>
             );
           })}
-        </ul>
-      </div> */}
+        </div>
+      </div>
     </div>
   );
 };
-
 export default Person;
