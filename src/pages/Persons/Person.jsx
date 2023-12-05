@@ -54,9 +54,13 @@ const Person = () => {
           {items.map((item) => {
             return (
               <div className="person__item" key={item.slug}>
+              
                 <div className="person__photo"></div>
                 <span className="person__name">{item.name}</span>
                 <span className="person__hous">{item.house.name}</span>
+                <button className="btn-reset btn" onClick={randomHandler}>
+                  Random Quotes
+                </button>
                 <ul className="quotes-list">
                   {randomItem.length > 0
                     ? randomItem.map((item) => {
@@ -74,9 +78,7 @@ const Person = () => {
                         );
                       })}
                 </ul>
-                <button className="btn-reset btn" onClick={randomHandler}>
-                  Random Quotes
-                </button>
+              
               </div>
             );
           })}

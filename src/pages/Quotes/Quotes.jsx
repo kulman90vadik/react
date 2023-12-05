@@ -43,6 +43,9 @@ const Quotes = () => {
     <div className="quotes">
       <div className="quotes__container">
         <div className="quotes__inner">
+        <button className="btn-reset btn" onClick={randomHandler}>
+            Random Quotes
+          </button>
           <ul className="quotes-list">
             {random.map((item) => {
               return (
@@ -52,9 +55,6 @@ const Quotes = () => {
               );
             })}
           </ul>
-          <button className="btn-reset btn" onClick={randomHandler}>
-            Random Quotes
-          </button>
         </div>
       </div>
     </div>

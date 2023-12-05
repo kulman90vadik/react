@@ -1,6 +1,6 @@
 import "./houses.scss";
 import { useSelector } from "react-redux";
-import HousesListItem from './HousesListItem';
+import HousesListItem from './HousesListItem/HousesListItem';
 
 const Houses = () => {
   const valueSearch = useSelector((state) => state.valueSearch.valueSearch);
