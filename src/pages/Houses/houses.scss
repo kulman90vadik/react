@@ -1,4 +1,4 @@
-
+@import '../../scss-setings/vars.scss';
 
 .houses {
   min-height: 100vh;
@@ -28,6 +28,7 @@
       width: 100%;
     }
   }
+
 
   &__card {
     height: 300px;

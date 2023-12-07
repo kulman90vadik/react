@@ -16,6 +16,7 @@ export const housesClise = createSlice({
       state.housesList = obj.payload;
     }
   },
+  
 })
 
 export const { housesList, addToHouses } = housesClise.actions

@@ -108,3 +108,15 @@ body {
   border: 3px solid rgba($firefly, 0.9);
 }
 
+.error {
+  background-color: rgba($firefly, 0.6);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 39px;
+  text-align: center;
+  color: rgb(197, 79, 79);
+  font-weight: 500;
+  grid-column: 1/12;
+}
