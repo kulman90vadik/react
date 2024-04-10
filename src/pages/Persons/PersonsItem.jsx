@@ -15,7 +15,9 @@ const PersonsItem = ({item}) => {
     </li>
   );
 }
+
  
+
 
 
 

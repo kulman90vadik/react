@@ -42,6 +42,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="houses" element={<Houses loading={loading} />} />
+        
         <Route path="persons" element={<Persons />} />
         <Route path="quotes" element={<Quotes />} />
         <Route path="houses/:slug" element={<Hous />} />
